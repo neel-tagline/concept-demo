@@ -6,11 +6,13 @@ import { StudentProfileComponent } from './components/student-profile/student-pr
 const routes: Routes = [
   {
     path:'',
-    component: DashboardComponent
-  },
-  {
-    path:'profile',
-    component: StudentProfileComponent
+    component: DashboardComponent,
+    children:[
+      {
+        path:'profile',
+        component: StudentProfileComponent        
+      }
+    ]
   }
 ];
 

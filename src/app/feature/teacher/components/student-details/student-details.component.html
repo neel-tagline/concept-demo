@@ -1,0 +1,15 @@
+<div class="container-fluid">
+    <table>
+        <thead>
+            <tr colspan=2 class="fw-bold text-center">Student Details</tr>
+            <th>Name</th>
+            <th>Gender</th>
+        </thead>
+        <ng-container *ngFor="let student of studentData">
+            <tr>
+                <td>{{student.name}}</td>
+                <td>{{student.gender}}</td>
+            </tr>
+        </ng-container>
+    </table>
+</div>

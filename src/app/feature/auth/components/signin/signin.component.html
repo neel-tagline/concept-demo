@@ -1,1 +1,32 @@
-<p>signin works!</p>
+<div class="container-fluid d-flex justify-content-center">
+    <div class="m-5 userform">
+        <form [formGroup]="signInForm">
+            <h3 class="text-center">Sign in</h3>
+            <div class="d-flex">
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" id="student" name="userType" formControlName="userType"
+                        value="student">
+                    <label class="form-check-label" for="student">
+                        Student
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" id="teacher" name="userType" formControlName="userType"
+                        value="teacher">
+                    <label class="form-check-label" for="teacher">
+                        Teacher
+                    </label>
+                </div>
+            </div>
+            <div class="input-group">
+                <input class="form-control" type="number" formControlName="id" placeholder="Id number">
+            </div>
+            <div class="input-group">
+                <input class="form-control" type="password" formControlName="password" placeholder="Password">
+            </div>
+            <app-button class="button mt-3" (onClick)="onClick($event)" [label]="label"></app-button>
+            <p class="mt-2">New User ? <a [routerLink]="['/signup']" routerLinkActive="router-link-active">Register Here</a></p>
+        </form>
+        
+    </div>
+</div>

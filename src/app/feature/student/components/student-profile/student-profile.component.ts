@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
   selector: 'app-student-profile',
@@ -6,5 +7,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./student-profile.component.scss']
 })
 export class StudentProfileComponent {
-
+  @Input() name!:any;
+  constructor(public activeModal: NgbActiveModal) {}
 }
